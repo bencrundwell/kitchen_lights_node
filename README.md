@@ -1,0 +1,1 @@
+Simple Node-Red node to interface to a fadecandy server.
