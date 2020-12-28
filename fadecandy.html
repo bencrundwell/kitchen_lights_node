@@ -1,0 +1,40 @@
+<script type="text/javascript">
+    RED.nodes.registerType('fadecandy',{
+        category: 'function',
+        color: '#D8BFD8',
+        defaults: {
+            name: {value:""},
+            ip: {value:"localhost"}
+        },
+        inputs:1,
+        outputs:0,
+        icon: "light.svg",
+        align: 'right',
+        label: function() {
+            return this.name||"fadecandy";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="fadecandy">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-ip"><i class="icon-tag"></i> IP Address</label>
+        <input type="text" id="node-input-ip" placeholder="localhost">
+    </div>
+    <div class="form-row">
+        <label for="node-input-port"><i class="icon-tag"></i> IP Address</label>
+        <input type="text" id="node-input-port" placeholder="7890">
+    </div>
+    <div class="form-row">
+        <label for="node-input-num-leds"><i class="icon-tag"></i> Number of LEDs</label>
+        <input type="text" id="node-input-num-leds" placeholder="158">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="fadecandy">
+    <p>Contol a fadecandy server using OPC</p>
+</script>

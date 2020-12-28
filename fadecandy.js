@@ -34,7 +34,7 @@ function finished() {
 
 module.exports = function(RED) {
     function Fadecandy(config) {
-        RED.nodes.createNode(this,config);
+        RED.nodes.createNode(this, config);
         var node = this;
         node.on('input', function(msg) {
             //msg.payload = msg.payload;
@@ -129,6 +129,7 @@ module.exports = function(RED) {
             msg.payload = true;
             node.send(msg);
         });
+        
     }
     RED.nodes.registerType("fadecandy",Fadecandy);
 }
